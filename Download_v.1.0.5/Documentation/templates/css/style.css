@@ -1,0 +1,470 @@
+/*------------------------------------------------------------------
+Documentation Site Styling
+Version: 1;
+Author: ThemeMountain
+Copyright: ThemeMountain
+License: MIT
+
+[Table of contents]
+
+1. Common
+2. Typography
+3. Background Color & Color Classes
+4. Section Padding
+5. Header & Navigation
+6. Homepage
+7. Inner Pages
+8. Sidebar
+9. Footer
+10. Components
+-------------------------------------------------------------------*/
+
+/*------------------------------------------------------------------
+[1. Common]
+*/
+/* Horizon Plugin Demo*/
+.horizon{
+	opacity: 0;
+	visibility: hidden;
+}
+/* Level Indication */
+.indicator{
+	width: 1rem;
+	height: 1rem;
+	display: inline-block;
+	border-radius: 50%;
+}
+.wrapper{
+	background-color: #fff;
+}
+/*------------------------------------------------------------------
+[2. Typography]
+*/
+body{
+	font-family: 'Open Sans', 'Helvetica Neue', sans-serif;
+	letter-spacing: 0;
+	font-weight: 400;
+	font-size: 1.4rem;
+	line-height: 1.8;
+	color: #666;
+}
+
+/* Titles */
+h1, h1 a,
+h2, h2 a,
+h3, h3 a,
+h4, h4 a, 
+h5, h5 a, 
+h6, h6 a{
+	font-family: 'Lato', 'Helvetica Neue', sans-serif;
+	font-weight: 300;
+	color: #333;
+	letter-spacing: 0.1rem;
+}
+h1 a:hover,
+h2 a:hover,
+h3 a:hover,
+h4 a:hover,
+h5 a:hover,
+h6 a:hover{
+	color: #81a936;
+}
+h2 .label,
+h3 .label,
+h5 .label{
+	font-size: 1.4rem;
+	text-transform: uppercase;
+}
+.intro-title-1 h1{
+	color: #ffffff;
+}
+
+/* Widget Titles */
+.widget-title {
+	font-size: 1.8rem;
+	font-weight: 400;
+}
+
+/* Title Background */
+h2 span[class*="bkg-"],
+h5 span[class*="bkg-"]{
+	padding: 0.2rem 0.6rem 0.3rem 0.6rem;
+	font-size: 1.3rem;
+	vertical-align: middle;
+}
+
+/* Links */
+a,
+p a{
+	font-weight: bold;
+}
+a:hover, 
+p a:hover{
+	text-decoration: none;
+}
+.sidebar a{
+	color: #666;
+	font-weight: normal;
+}
+.sidebar a:hover{
+	color: #81a936;
+}
+
+/* Pre */
+.code-snippet-title{
+	padding: 1rem;
+	margin-bottom: 0;
+	background-color: #eee;
+	font-size: 1.1rem;
+	font-weight: 700;
+	text-transform: uppercase;
+	border-top-left-radius: 0.3rem;
+	border-top-right-radius: 0.3rem;
+}
+.code-snippet-title + .code-snippet{
+	border-top-left-radius: 0;
+	border-top-right-radius: 0;
+}
+pre{
+	tab-size: 4;
+	-moz-tab-size: 4;
+	-o-tab-size: 4;
+	-webkit-tab-size: 4;
+	line-height: 1.2;
+}
+pre code{
+	font-family: monospace;
+	font-size: 1.3rem;
+}
+
+/*------------------------------------------------------------------
+[3. Background & Color Classes]
+*/
+
+/* grey */
+.bkg-grey{
+	background-color: #eee;
+	border-color: #eee;
+}
+.bkg-hover-grey:hover{
+	background-color: #eee;
+	border-color: #eee;
+}
+.border-hover-grey:hover{
+	border-color: #eee;
+}
+.color-grey,
+.color-hover-grey:hover{
+	color: #eee;
+}
+.side-navigation .label.bkg-grey{
+	background-color: #555;
+	border-color: #555;
+	color: #fff;
+}
+
+/* green */
+.bkg-green{
+	background-color: #81a936;
+	border-color: #81a936;
+}
+.bkg-hover-green:hover{
+	background-color: #81a936;
+	border-color: #81a936;
+}
+.border-hover-green:hover{
+	border-color: #81a936;
+}
+.color-green,
+.color-hover-green:hover{
+	color: #81a936;
+}
+
+/* purple */
+.bkg-purple{
+	background-color: #5E35B1;
+	border-color: #5E35B1;
+}
+.bkg-hover-purple:hover{
+	background-color: #5E35B1;
+	border-color: #5E35B1;
+}
+.border-hover-purple:hover{
+	border-color: #5E35B1;
+}
+.color-purple-light,
+.color-hover-purple:hover{
+	color: #5E35B1;
+}
+
+/* purple light */
+.bkg-purple-light{
+	background-color: #7E57C2;
+	border-color: #7E57C2;
+}
+.bkg-hover-purple-light:hover{
+	background-color: #7E57C2;
+	border-color: #7E57C2;
+}
+.border-hover-purple-light:hover{
+	border-color: #7E57C2;
+}
+.color-purple-light,
+.color-hover-purple-light:hover{
+	color: #7E57C2;
+}
+
+/* Warnign label */
+.warning .label{
+	background-color: #a9444a;
+	border-color: #a9444a;
+	color: #fff;
+}
+.alert .label{
+	background-color: #8a6d3b;
+	border-color: #8a6d3b;
+	color: #fff;
+}
+
+/*------------------------------------------------------------------
+[4. Section Padding]
+*/
+
+hr,
+.divider{
+	margin-top: 4rem;
+	margin-bottom: 4rem;
+}
+
+/*------------------------------------------------------------------
+[5. Header & Navigation]
+*/
+.nav-bar.nav-main{
+	width: 100%;
+	background: none;
+	position: absolute;
+	z-index: 100;
+}
+.nav-bar.nav-main > .row > .column{
+	border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+.nav-bar,
+.nav-bar .logo,
+.nav-bar .navigation > ul > li,
+.nav-bar .navigation > ul > li > a:not(.button){
+	height: 6rem;
+	line-height: 6rem;
+}
+.nav-bar.nav-main .logo a{
+	color: #fff;
+}
+.nav-bar.nav-main .navigation > ul > li > a{
+	color: #fff;
+	opacity: 0.5;
+}
+.nav-bar.nav-main .navigation ul li a:hover,
+.nav-bar.nav-main .navigation ul li.current > a{
+	background: none;
+	opacity: 1;
+}
+.navigation .navigation-show{
+	line-height: 1;
+	font-size: 2.4rem;
+}
+.navigation-show > a{
+	color: #fff;
+}
+
+/* Side Navigation */
+.side-navigation .label{
+	float: right;
+	font-size: 0.9rem;
+	font-weight: 200;
+}
+.side-navigation-header,
+.side-navigation-footer{
+	font-size: 1.4rem;
+	line-height: 1.8;
+}
+.side-navigation-header{
+	min-height: 5rem;
+	padding: 0 4rem;
+}
+.side-navigation-footer{
+	padding: 2rem 4rem;
+}
+.side-navigation-header .logo{
+	min-height: 6rem;
+	line-height: 6rem;
+	float: left;
+}
+.navigation-header .logo a{
+	font-size: 1.5rem;
+	font-weight:bold;
+	text-decoration: none;
+	color: #666666;
+}
+.navigation-hide{
+	position: absolute;
+	right: 0;
+	top: 1rem;
+}
+.navigation-hide a{
+	color: #999;
+}
+.mobile .navigation-show{
+	display: table;
+}
+.mobile .navigation-show a{
+	height: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+@media only screen and (max-width: 960px) {
+	.navigation-show{
+		display: table;
+	}
+	.navigation-show a{
+		height: 100%;
+		color: #fff;
+		display: table-cell;
+		vertical-align: middle;
+	}
+}
+
+/*------------------------------------------------------------------
+[6. Inner Pages]
+*/
+
+[class*="intro-title-"] .row,
+[class*="intro-title-"] .column,
+.title-container{
+	height: 100%;
+}
+.title-container[class^="title-"]{
+	margin-bottom: 0;
+}
+.title-container{
+	width: 100%;
+	display: table;
+}
+.title-container-inner{
+	display: table-cell;
+	vertical-align: middle;
+}
+.title-container-inner > *:first-child{
+	margin-top: 0;
+}
+.title-container-inner > *:last-child{
+	margin-bottom: 0;
+}
+
+/* Title Section */
+.intro-title-1{
+	height: 55rem;
+	background-color: #7E57C2;
+}
+.intro-title-1.small{
+	height: 30rem;
+}
+
+/*------------------------------------------------------------------
+[7. Sidebar]
+*/
+.sidebar .list-group .current a,
+.sidebar .list-group .current span:not(.label),
+.examples-list .current a,
+.examples-list .current span:not(.label){
+	color:#81a936;
+	font-weight: bold;
+}
+.sidebar .list-group [class*="icon-"]{
+	float: right;
+	margin-right: 0;
+	line-height: 2;
+}
+.sidebar .label.small{
+	font-size: 0.9rem;
+	vertical-align: middle;
+}
+.sidebar li a{
+	font-size: 1.2rem;
+}
+
+/*------------------------------------------------------------------
+[8. Footer]
+*/
+footer .navigation{
+	margin-bottom: 2.5rem;
+}
+footer .navigation:after{
+	width: 6rem;
+	height: 0.1rem;
+	margin: 1rem 0 0 -3rem;
+	background: #555;
+	content: '';
+	position: absolute;
+	left: 50%;
+}
+footer .navigation ul li a{
+	line-height: 2rem;
+	text-transform: uppercase;
+	background: none;
+	padding: 0 1rem;
+}
+footer .navigation ul li:hover > a{
+	background:none;
+	color:#ffffff;
+}
+footer .navigation ul li.current > a,
+footer .navigation ul li.current-menu-item > a,
+footer .navigation ul li.current_page_item a,
+footer .navigation ul li.current-menu-ancestor > a,
+footer .navigation ul li.current_page_ancestor > a{
+	background: none;
+}
+footer{
+	background: #232323;
+}
+footer img{
+	width: 170px;
+}
+footer .footer-text{
+	margin-top: 0.5rem;
+	margin-bottom: 1rem;
+	text-transform: uppercase;
+	font-size: 11px;
+	color: #555;
+}
+footer .version-number{
+	padding: 0.4rem 1.2rem;
+	margin: auto;
+	border-radius: 0.3rem;
+	background: #1b1b1b;
+	font-size: 1rem;
+	color: #666;
+	text-transform: uppercase;
+	display: inline-block;
+}
+footer .copyright{
+	font-size: 1.1rem;
+	color: #555;
+}
+footer .scroll-to-top{
+	width: 3rem;
+	height: 3rem;
+	line-height: 3rem;
+	border-radius: 0.3rem;
+	margin: auto;
+	background: #1b1b1b;
+}
+
+/*------------------------------------------------------------------
+[10. Components]
+*/
+.code-snippet{
+	background-color: #fafafa;
+}
+.label{
+	padding: 0.1rem 0.5rem;
+}

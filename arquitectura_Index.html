@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0" name="viewport">
+	<title>Marquez | Creative Multipurpose HTML5 Template</title>
+	<link rel="shortcut icon" type="image/x-icon" href="images/theme-mountain-favicon.ico">
+
+	<!-- Font -->
+	<link rel="stylesheet" href="style.css" />
+	<link href='https://fonts.googleapis.com/css?family=Open+Sans:300,400,700%7CLato:300,400,700' rel='stylesheet'
+		type='text/css'>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&family=Lobster&family=Roboto:wght@100;400&display=swap"
+		rel="stylesheet">
+	
+
+	<!-- Css -->
+	<link rel="stylesheet" href="css/core.min.css" />
+	<link rel="stylesheet" href="css/stylewp.css" />
+	<link rel="stylesheet" href="css/skin.css" />
+	<link rel="stylesheet" href="style.css" />
+	<link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+	<link href="vendor/magnific-popup/magnific-popup.css" rel="stylesheet">
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+			color: #fff;
+			font-family: Arial;
+		}
+
+		div#imagen {
+			width: 300px;
+			height: 200px;
+			background-size: cover;
+			background-image: url("1.jpg");
+			margin: 30px auto;
+		}
+
+		div#imagen2 {
+			width: 300px;
+			height: 200px;
+			background-size: cover;
+			background-image: url("2.jpg");
+			margin: 30px auto;
+		}
+
+		div#imagen3 {
+			width: 300px;
+			height: 200px;
+			background-size: cover;
+			background-image: url("3.jpg");
+			margin: 30px auto;
+		}
+
+		div#imagen4 {
+			width: 300px;
+			height: 200px;
+			background-size: cover;
+			background-image: url("4.jpg");
+			margin: 30px auto;
+		}
+
+		div#imagen5 {
+			width: 300px;
+			height: 200px;
+			background-size: cover;
+			background-image: url("5.jpg");
+			margin: 30px auto;
+		}
+
+		div#imagen6 {
+			width: 300px;
+			height: 200px;
+			background-size: cover;
+			background-image: url("6.jpg");
+			margin: 30px auto;
+		}
+
+		div#info {
+			position: absolute;
+			overflow: hidden;
+			width: 300px;
+			height: 200px;
+			background-color: rgba(31, 31, 31, 0.9);
+			opacity: 0;
+			transition: opacity 0.3s;
+		}
+
+		div#imagen:hover div#info {
+			opacity: 1;
+		}
+
+		div#imagen2:hover div#info {
+			opacity: 1;
+		}
+
+		div#imagen3:hover div#info {
+			opacity: 1;
+		}
+
+		div#imagen4:hover div#info {
+			opacity: 1;
+		}
+
+		div#imagen5:hover div#info {
+			opacity: 1;
+		}
+
+		div#imagen6:hover div#info {
+			opacity: 1;
+		}
+
+		p#headline {
+			position: absolute;
+			font-size: 1.5rem;
+			margin-left: -75px;
+			margin-top: 15px;
+			transition: margin-left 0.3s;
+		}
+
+		div#imagen:hover p#headline {
+			margin-left: 25px;
+		}
+
+		div#imagen2:hover p#headline {
+			margin-left: 95px;
+		}
+
+		div#imagen3:hover p#headline {
+			margin-left: 95px;
+		}
+
+		div#imagen4:hover p#headline {
+			margin-left: 95px;
+		}
+
+		div#imagen5:hover p#headline {
+			margin-left: 95px;
+		}
+
+		div#imagen6:hover p#headline {
+			margin-left: 95px;
+		}
+
+		p#descripcion {
+			font-size: 1rem;
+			text-align: center;
+			margin-top: 200px;
+			transition: margin-top 0.4s;
+		}
+
+		div#imagen:hover p#descripcion {
+			margin-top: 75px;
+		}
+
+		div#imagen2:hover p#descripcion {
+			margin-top: 75px;
+		}
+
+		div#imagen3:hover p#descripcion {
+			margin-top: 75px;
+		}
+
+		div#imagen4:hover p#descripcion {
+			margin-top: 75px;
+		}
+
+		div#imagen5:hover p#descripcion {
+			margin-top: 75px;
+		}
+
+		div#imagen6:hover p#descripcion {
+			margin-top: 75px;
+		}
+
+		#portfolio .container-fluid {
+			max-width: 1920px;
+		}
+
+		#portfolio .container-fluid .portfolio-box {
+			position: relative;
+			display: block;
+		}
+
+		#portfolio .container-fluid .portfolio-box .portfolio-box-caption {
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			bottom: 0;
+			text-align: center;
+			color: white;
+			background: fade-out(primary, .1);
+			opacity: 0;
+			transition: opacity 0.25s ease;
+			text-align: center;
+		}
+
+		#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-category {
+			font-size: 0.85rem;
+			font-weight: 600;
+			text-transform: uppercase;
+			font-family: font-family-sans-serif;
+		}
+
+		#portfolio .container-fluid .portfolio-box .portfolio-box-caption .project-name {
+			font-size: 1.2rem;
+		}
+
+		#portfolio .container-fluid .portfolio-box:hover .portfolio-box-caption {
+			opacity: 1;
+		}
+
+		.imagen:hover {
+			filter: opacity(.5);
+		}
+	</style>
+	<!--[if lt IE 9]>
+    	<script type="text/javascript" src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+</head>
+
+<body class="home-page">
+
+	<!-- Overlay Navigation Menu -->
+	<div class="overlay-navigation-wrapper" data-no-scrollbar data-animation="scale-in">
+		<div class="overlay-navigation-scroll-pane">
+			<div class="overlay-navigation-inner">
+				<div class="v-align-middle">
+					<div class="overlay-navigation-header row collapse full-width">
+						<div class="column width-12">
+							<div class="navigation-hide overlay-nav-hide">
+								<a href="#">
+									<span class="icon-cancel"></span>
+								</a>
+							</div>
+						</div>
+					</div>
+					<div class="row collapse full-width">
+						<div class="column width-12">
+							<nav class="overlay-navigation pull-left clear-float-on-mobile">
+								<span class="menu-title">Pages</span>
+								<ul>
+									<li>
+										<a href="#" class="contains-sub-menu">Home</a>
+										<ul class="sub-menu">
+											<li class="current">
+												<a href="index.html">Home Default</a>
+											</li>
+											<li>
+												<a href="index-with-parallax.html">Home with Parallax</a>
+											</li>
+											<li>
+												<a href="index-with-video.html">Home with Video</a>
+											</li>
+											<li>
+												<a href="index-with-blog-portfolio.html">Home with Blog &amp; Folio</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="contains-sub-menu">About</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="about-style-one.html">About Regular</a>
+											</li>
+											<li>
+												<a href="about-style-two.html">About Style 2</a>
+											</li>
+											<li>
+												<a href="about-style-three.html">About Style 3</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="contains-sub-menu">News</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="blog.html">3 Column Grid</a>
+											</li>
+											<li>
+												<a href="blog-four-columns-full-width.html">4 Column Full Width Grid</a>
+											</li>
+											<li>
+												<a href="blog-sidebar-right-with-media.html">Blog Index With Sidebar</a>
+											</li>
+											<li>
+												<a href="blog-wide-no-sidebar.html">Blog Without Sidebar</a>
+											</li>
+											<li>
+												<a href="blog/blog-single-post-sidebar-right.html">Single Post Sidebar
+													Right</a>
+											</li>
+											<li>
+												<a href="blog/blog-single-post-sidebar-right-no-media.html">Single Post
+													Without Media</a>
+											</li>
+											<li>
+												<a href="blog/blog-single-post-sidebar-right-with-media.html">Single
+													Post With Media</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="contains-sub-menu">Folio</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="portfolio-three-columns.html">3 Column Grid Default</a>
+											</li>
+											<li>
+												<a href="portfolio-three-columns-alternative.html">3 Column Grid Alt</a>
+											</li>
+											<li>
+												<a href="portfolio-three-columns-full-width.html">3 Column Grid Full
+													Width</a>
+											</li>
+											<li>
+												<a href="portfolio-three-columns-full-width-no-margins.html">3 Column
+													Grid Full Width No Margins</a>
+											</li>
+											<li>
+												<a href="portfolio-four-columns-full-width-alternative.html">4 Column
+													Grid Full Width Alt</a>
+											</li>
+											<li>
+												<a href="portfolio-four-columns-full-width-no-margins.html">4 Column
+													Grid Full Width No Margins</a>
+											</li>
+											<li>
+												<a href="portfolio-masonry-grid.html">Masonry Layout Margin</a>
+											</li>
+											<li>
+												<a href="portfolio-masonry-grid-no-margins.html">Masonry Grid No
+													Margins</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="#" class="contains-sub-menu">Contact</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="contact-style-one.html">Contact Regular</a>
+											</li>
+											<li>
+												<a href="contact-style-two.html">Contact Style 2</a>
+											</li>
+											<li>
+												<a href="contact-style-three.html">Contact Style 3</a>
+											</li>
+										</ul>
+									</li>
+									<!---->
+									<li>
+										<a href="#" class="contains-sub-menu">More</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="elements.html">Elements</a>
+											</li>
+											<li>
+												<a href="404.html">400 Not Found</a>
+											</li>
+											<li>
+												<a href="500.html">500 Error</a>
+											</li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+							<nav class="overlay-navigation pull-left clear-float-on-mobile hide-on-mobile">
+								<span class="menu-title">Projects</span>
+								<ul>
+									<li>
+										<a href="portfolio/distillery.html">Distillery</a>
+									</li>
+									<li>
+										<a href="portfolio/packaging.html">The Coffee Shop</a>
+									</li>
+									<li>
+										<a href="portfolio/barber-shop.html">Rockabilly Barber</a>
+									</li>
+									<li>
+										<a href="portfolio/clothing.html">Montreal Clothing</a>
+									</li>
+									<li>
+										<a href="portfolio/mobile-app.html">Macaw iOS App</a>
+									</li>
+									<li>
+										<a href="portfolio/restaurant.html">The Cantina</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+					</div>
+					<div class="overlay-navigation-footer row full-width">
+						<div class="column width-12 no-padding">
+							<p class="copyright no-margin-bottom">&copy; 2014 THEMEMOUNTAIN. All Rights Reserved.</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Overlay Navigation Menu End -->
+
+	<div class="wrapper reveal-side-navigation">
+		<div class="wrapper-inner">
+
+			<!-- Header -->
+			<header class="header header-fixed header-fixed-on-mobile header-transparent" data-bkg-threshold="100"
+				data-compact-threshold="100">
+				<div class="header-inner">
+					<div class="row collapse full-width nav-bar reveal-side-navigation">
+						<div class="column width-12 nav-bar-inner">
+							<div class="logo">
+								<div class="logo-inner">
+									<!-- -->
+									<a href="index.html"><img src="images/logo-dark.png"
+											alt="Una-Agencia-Aburrida" /></a>
+									<a href="index.html"><img src="images/logo.png" alt="Una-Agencia-Aburrida" /></a>
+								</div>
+							</div>
+							<nav class="navigation nav-block secondary-navigation nav-right">
+								<ul>
+									<li class="aux-navigation hide">
+										<!-- Aux Navigation -->
+										<a href="#" class="navigation-show overlay-nav-show nav-icon">
+											<span class="icon-menu"></span>
+										</a>
+									</li>
+								</ul>
+							</nav>
+							<nav class="navigation nav-block primary-navigation nav-right">
+								<ul>
+									<li class="current">
+										<a href="index.html">Inicio</a>
+										<ul class="sub-menu">
+											<li class="current">
+												<a href="index.html">Home Default</a>
+											</li>
+											<li>
+												<a href="index-with-parallax.html">Home with Parallax</a>
+											</li>
+											<li>
+												<a href="index-with-video.html">Home with Video</a>
+											</li>
+											<li>
+												<a href="index-with-blog-portfolio.html">Home with Blog &amp; Folio</a>
+											</li>
+										</ul>
+									</li>
+									<li>
+										<a href="about-style-one.html">Nosotros</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="about-style-one.html">About Regular</a>
+											</li>
+											<li>
+												<a href="about-style-two.html">About Style 2</a>
+											</li>
+											<li>
+												<a href="about-style-three.html">About Style 3</a>
+											</li>
+										</ul>
+									</li>
+									<li class="contains-mega-sub-menu">
+										<a href="portfolio-three-columns.html">Servicios</a>
+										<ul class="mega-sub-menu">
+											<li>
+												<a href="portfolio-three-columns.html">DISEÑO GRAFICO</a>
+												<ul>
+													<li>
+														<a href="portfolio-three-columns.html">3 Column Grid Default</a>
+													</li>
+													
+												</ul>
+											</li>
+											<li>
+												<!--portfolio-three-columns.html-->
+												<a href="arquitectura_Index.html">
+													DISEÑO ARQUITECTONICO</a>
+												<ul>
+													<li>
+														<a href="portfolio-three-columns.html">3 Column Grid Default</a>
+													</li>
+													<li>
+														<a href="portfolio-three-columns-alternative.html">3 Column Grid
+															Alt</a>
+													</li>
+													
+												</ul>
+											</li>
+											<li>
+												<a href="portfolio-three-columns.html">DESARROLLO WEB</a>
+												<ul>
+													<li>
+														<a href="portfolio-three-columns.html">3 Column Grid Default</a>
+													</li>
+													<li>
+														<a href="portfolio-three-columns-alternative.html">3 Column Grid
+															Alt</a>
+													</li>
+													
+												</ul>
+											</li>
+
+											
+											<li style="margin-top:23px;">
+												<a href="portfolio-four-columns-full-width-alternative.html">AUDIOVISUAL</a>
+												<ul>
+													<li>
+														<a href="portfolio-four-columns-full-width-alternative.html">4
+															Column Grid Full Width Alt</a>
+													</li>
+													<li>
+														<a href="portfolio-four-columns-full-width-no-margins.html">4
+															Column Grid Full Width No Margins</a>
+													</li>
+													<li>
+														<a href="portfolio-masonry-grid.html">Full Width Masonry
+															Grid</a>
+													</li>
+													<li>
+														<a href="portfolio-masonry-grid-no-margins.html">Full Width
+															Masonry Grid No Margins</a>
+													</li>
+												</ul>
+											</li>
+											<br>
+											<li style="margin-top:23px;">
+												<a href="">MARKETING DIGITAL</a>
+												
+											</li>
+											<br>
+											
+										</ul>
+									</li>
+									<!--
+									<li>
+										<a href="blog.html">Blog</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="blog.html">3 Column Grid</a>
+											</li>
+											<li>
+												<a href="blog-four-columns-full-width.html">4 Column Full Width Grid</a>
+											</li>
+											<li>
+												<a href="blog-sidebar-right-with-media.html">Blog Index With Sidebar</a>
+											</li>
+											<li>
+												<a href="blog-wide-no-sidebar.html">Blog Without Sidebar</a>
+											</li>
+											<li>
+												<a href="blog/blog-single-post-sidebar-right.html">Single Post Sidebar Right</a>
+											</li>
+											<li>
+												<a href="blog/blog-single-post-sidebar-right-no-media.html">Single Post Without Media</a>
+											</li>
+											<li>
+												<a href="blog/blog-single-post-sidebar-right-with-media.html">Single Post With Media</a>
+											</li>
+										</ul>
+									</li>
+									-->
+									<li>
+										<a href="contact-style-one.html">Contacto</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="contact-style-one.html">Contact Regular</a>
+											</li>
+											<li>
+												<a href="contact-style-two.html">Contact Style 2</a>
+											</li>
+											<li>
+												<a href="contact-style-three.html">Contact Style 3</a>
+											</li>
+										</ul>
+									</li>
+									<!--
+									<li>
+										<a href="elements.html">More</a>
+										<ul class="sub-menu">
+											<li>
+												<a href="elements.html">Elements</a>
+											</li>
+											<li>
+												<a href="404.html">400 Not Found</a>
+											</li>
+											<li>
+												<a href="500.html">500 Error</a>
+											</li>
+										</ul>
+									</li>
+									-->
+								</ul>
+							</nav>
+						</div>
+					</div>
+				</div>
+			</header>
+			<!-- Header End -->
+
+			<!-- Content -->
+			<div class="content clearfix">
+
+				<!-- Back Top -->
+			
+				<!-- Back Top End -->
+
+				<!-- Fullscreen Slider Section 
+					class section==tm-slider-parallax-container
+					section-block featured-media
+				
+				
+				-->
+				<section class=" window-height " style="widht:">
+
+					<!-- Scroll Down 
+					<div class="scroll-down">
+						<a href="#about" class="scroll-link">Scroll Down</a>
+					</div>-->
+					<!-- Scroll Down End -->
+
+					<div class="tm-slider-container full-width-slider" data-parallax data-external-padding="60"
+						data-animation="slide" data-scale-under="960">
+						<ul class="tms-slides">
+							<li class="tms-slide" data-image data-force-fit data-animation="slideTopBottom">
+								<div class="tms-content">
+									<div class="tms-content-inner center">
+										<div class="row">
+											<div class="column width-12" style="margin-top:35%;">
+												<h1 class="tms-caption title-xlarge color-white lspacing-medium"
+													data-animate-in="preset:scaleOut;duration:1000ms;" data-no-scale>
+
+												</h1>
+												<div class="clear"></div>
+												<h3 class="tms-caption font-alt-1 color-white lspacing-xlarge"
+													data-animate-in="preset:slideInUpShort;duration:600ms;delay:400ms;"
+													data-no-scale>
+
+												</h3>
+											</div>
+											<a href="portfolio/distillery.html" style="margin-top:12%;"
+												class="tms-caption button text-uppercase lspacing-medium weight-bold bkg-black color-white bkg-hover-pink color-hover-white fade-location"
+												data-animate-in="preset:slideInUpShort;duration:1000ms;delay:200ms;"
+												data-offsety="60" data-no-scale>
+												View Project
+											</a>
+										</div>
+									</div>
+								</div>
+								<img data-src="images/slider/slide-20-fs.jpg" data-retina alt="" />
+							</li>
+							<!--
+							<li class="tms-slide" data-image data-force-fit data-animation="scaleOut">
+								<div class="tms-content">
+									<div class="tms-content-inner">
+										<div class="row">
+											<div class="column width-12 center">
+												<h1 class="tms-caption title-xlarge color-white lspacing-medium"
+													data-animate-in="preset:slideInUpShort;duration:1000ms"
+													data-no-scale
+												>
+													Seccion
+												</h1>
+												<div class="clear"></div>
+												<a href="portfolio/distillery.html" class="tms-caption button text-uppercase lspacing-medium weight-bold bkg-black color-white bkg-hover-pink color-hover-white fade-location"
+													data-animate-in="preset:slideInUpShort;duration:1000ms;delay:200ms;"
+													data-offsety="60"
+													data-no-scale
+												>
+													View Project
+												</a>
+											</div>
+										</div>
+									</div>
+								</div>
+								<img data-src="images/slider/slide-2-fs.jpg" data-retina src="images/blank.png" alt=""/>
+							</li>
+							-->
+
+						</ul>
+					</div>
+				</section>
+				<!-- Fullscreen Slider Section End 
+
+		
+				<div id="about" class="section-block">
+					<div class="row">
+						<p class=" text-xlarge weight-bold color-charcoal column width-8 "  style="font-family: 'Dancing Script', cursive;">Texto 2</p>
+							<p class="text-xlarge weight-bold color-charcoal" style="font-family: 'Lobster', cursive;">Texto 3</p>
+						<div class="column width-8 offset-2 center horizon" data-animate-in="preset:slideInRightShort;duration:1000ms;" data-threshold="0.5">
+							<p class="lead text-xlarge weight-bold color-charcoal text-line-vertical" style="font-family: 'Roboto', sans-serif;">Welcome to Marquez. We build beautiful </p>
+							
+						</div>
+					</div>
+				</div>-->
+				<!-- About Intro End -->
+
+				<!-- Portfolio Grid Section 
+				<div class="section-block grid-filter-menu no-padding-top center">
+					<div class="row no-padding">
+						<div class="column width-12">
+							<h2 class="mb-30">NUESTROS SERVICIOS </h2>
+							<a class="nav-link" href="index.html" style="color: #fff;"><img src="images/icon/tiktok.svg" style="height: 25px;"  alt=""></a>
+							<ul>
+								<li><a class="active" href="#" data-filter="*">Todos</a></li>
+								<li><a href="#" data-filter=".design">Diseño Grafico</a></li>
+								<li><a href="#" data-filter=".identity">Diseño Arquitectonico</a></li>
+								<li><a href="#" data-filter=".photography">Desarrollo Web</a></li>
+								<li><a href="#" data-filter=".application">Audiovisual</a></li>
+								<li><a href="#" data-filter=".application">Marketing Digital</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="section-block grid-container fade-in-progressively full-width no-padding-top no-padding-bottom" data-layout-mode="masonry" data-animate-filter-duration="700" data-set-dimensions data-animate-resize data-animate-resize-duration="0">
+					<div class="row">
+						<div class="column width-12">
+							<div class="row grid content-grid-3">
+								<div class="grid-item grid-sizer identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#FF5733" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/clothing.html">
+											<img src="images/portfolio/grid/large-margins/project-4-landscape-alt.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Montreal</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item portrait design identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#C4FF33" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/barber-shop.html">
+											<img src="images/portfolio/grid/large-margins/project-3-portrait.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Rockabilly</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item photography">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#33FFE0" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/restaurant.html">
+											<img src="images/portfolio/grid/large-margins/project-6-landscape.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Cantina</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#E033FF" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/restaurant.html">
+											<img src="images/portfolio/grid/large-margins/project-6-landscape-alt.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Cantina</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item portrait photography application">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#FF338A" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/mobile-app.html">
+											<img src="images/portfolio/grid/large-margins/project-5-portrait.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Macaw</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#335BFF" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/packaging.html">
+											<img src="images/portfolio/grid/large-margins/project-2-landscape-alt.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Espresso Man</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item portrait design">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#33A8FF" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/distillery.html">
+											<img src="images/portfolio/grid/large-margins/project-1-portrait.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">8Threefifty</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item design">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#33FF8D" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/barber-shop.html">
+											<img src="images/portfolio/grid/large-margins/project-3-landscape-alt.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Rockabilly</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item design">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut" data-hover-speed="500" data-hover-bkg-color="#FFF933" data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/distillery.html">
+											<img src="images/portfolio/grid/large-margins/project-1-landscape.jpg" alt=""/>
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title">Rockabilly</span>
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>-->
+				<!-- Portfolio Grid Section End -->
+				<!--
+				<section style="height: 30vh; background: rgb(190, 217, 238);">
+					<h1 style="color: #fff;">
+						Introduccion
+					</h1>
+				</section>
+				-->
+				<section>
+					<div class="row">
+						<div class="column width-3">
+							<div id="imagen">
+								<div id="info">
+									<p id="headline">Proyectos de Arquitectura⁣</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="column width-3">
+							<div id="imagen2">
+								<div id="info">
+									<p id="headline">Diseño de Interior⁣</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="column width-3">
+							<div id="imagen3">
+								<div id="info">
+									<p id="headline">Diseño de Mobiliario⁣</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="column width-3">
+							<div id="imagen4">
+								<div id="info">
+									<p id="headline"> Modelado 3D </p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+
+
+
+					</div>
+					<div class="row">
+						<div class="column width-3">
+							<div id="imagen5">
+								<div id="info">
+									<p id="headline">Renderizado⁣</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="column width-3">
+							<div id="imagen">
+								<div id="info">
+									<p id="headline">Levantamiento de Planos</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="column width-3">
+							<div id="imagen2">
+								<div id="info">
+									<p id="headline">Maquetismo</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+						<div class="column width-3">
+							<div id="imagen2">
+								<div id="info">
+									<p id="headline">Remodelaciones</p>
+									<p id="descripcion">Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+										Sapiente voluptates.</p>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+				<!-- Portfolio Section -->
+				<a class="nav-link" href="https://icomoon.io/app/#/select/library" style="color: #fff;">link</a>
+				<a href="https://icomoon.io/app/#/select/library"><img src="images/icon/tiktok.svg"
+						style="height: 25px;" alt=""></a>
+				<!-- Portfolio Grid Section -->
+				<div class="section-block grid-filter-menu no-padding-top center">
+					<div class="row no-padding">
+						<h1>Projects</h1>
+					</div>
+				</div>
+				<div class="section-block grid-container fade-in-progressively full-width no-padding-top no-padding-bottom"
+					data-layout-mode="masonry" data-animate-filter-duration="700" data-set-dimensions
+					data-animate-resize data-animate-resize-duration="0">
+					<div class="row">
+						<div class="column width-12">
+							<div class="row grid content-grid-3">
+								<div class="grid-item grid-sizer identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut"
+										data-hover-speed="500" data-hover-bkg-color="#FF5733"
+										data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/clothing.html">
+											<img src="images/portfolio/grid/large-margins/project-4-landscape-alt.jpg"
+												alt="" />
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title"
+															style="font-size:20px;">Titulo</span>
+														<span class="project-title">Descripcion</span>
+
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="grid-item photography">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut"
+										data-hover-speed="500" data-hover-bkg-color="#33FFE0"
+										data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/restaurant.html">
+											<img src="images/portfolio/grid/large-margins/project-6-landscape.jpg"
+												alt="" />
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title"
+															style="font-size:20px;">Titulo</span>
+														<span class="project-title">Descripcion</span>
+
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut"
+										data-hover-speed="500" data-hover-bkg-color="#E033FF"
+										data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/restaurant.html">
+											<img src="images/portfolio/grid/large-margins/project-6-landscape-alt.jpg"
+												alt="" />
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title"
+															style="font-size:20px;">Titulo</span>
+														<span class="project-title">Descripcion</span>
+
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+
+								<div class="grid-item identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut"
+										data-hover-speed="500" data-hover-bkg-color="#335BFF"
+										data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/packaging.html">
+											<img src="images/portfolio/grid/large-margins/project-2-landscape-alt.jpg"
+												alt="" />
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title"
+															style="font-size:20px;">Titulo</span>
+														<span class="project-title">Descripcion</span>
+
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut"
+										data-hover-speed="500" data-hover-bkg-color="#335BFF"
+										data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/packaging.html">
+											<img src="images/portfolio/grid/large-margins/project-2-landscape-alt.jpg"
+												alt="" />
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title"
+															style="font-size:20px;">Titulo</span>
+														<span class="project-title">Descripcion</span>
+
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+								<div class="grid-item identity">
+									<div class="thumbnail img-scale-in" data-hover-easing="easeInOut"
+										data-hover-speed="500" data-hover-bkg-color="#335BFF"
+										data-hover-bkg-opacity="0.9">
+										<a class="overlay-link" href="portfolio/packaging.html">
+											<img src="images/portfolio/grid/large-margins/project-2-landscape-alt.jpg"
+												alt="" />
+											<span class="overlay-info">
+												<span>
+													<span>
+														<span class="project-title"
+															style="font-size:20px;">Titulo</span>
+														<span class="project-title">Descripcion</span>
+
+													</span>
+												</span>
+											</span>
+										</a>
+									</div>
+								</div>
+
+
+
+
+							</div>
+						</div>
+					</div>
+				</div>
+				<!-- Portfolio Grid Section End -->
+
+			</div>
+
+		
+		<!-- Content End 
+			
+			
+			
+			
+			
+			-->
+			
+			<!--btnwhasapp-->
+			<a href="https://api.whatsapp.com/send?phone=+58 424-7500800&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20los%20servicios%20que%20ofrece%20UAA%20."
+				class="float" target="_blank">
+				<img src="images/icon/whatsapp.svg" style="height: 23px;" alt=""></i>
+			</a>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer-top">
+				<div class="row flex">
+					<div class="column width-4">
+						<div class="widget">
+							<h4>We're Digital Creatives</h4>
+							<p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
+								fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
+								qui officia deserunt mollit anim id est laborum.</p>
+							<p>
+								126-130 Crosby Street, Soho<br>
+								New York City, NY 10012, U.S.<br>
+								&copy; ThemeMountain.
+							</p>
+
+						</div>
+					</div>
+					<div class="column width-4">
+						<div class="widget">
+							<h4>From the Blog</h4>
+							<ul class="list-group large">
+								<li>
+									<span class="post-info"><span class="post-date">27 Jul 2014</span></span>
+									<a href="#">Our New Los Angeles Downtown Office</a>
+								</li>
+								<li>
+									<span class="post-info"><span class="post-date">02 Jun 2014</span></span>
+									<a href="#">Tutorial - Hidden Gems of Sublime</a>
+								</li>
+								<li>
+									<span class="post-info"><span class="post-date">15 May 2014</span></span>
+									<a href="#">New Team Member - Jason Adams</a>
+								</li>
+								<li>
+									<span class="post-info"><span class="post-date">15 May 2014</span></span>
+									<a href="#">The New Twitter API</a>
+								</li>
+							</ul>
+						</div>
+						<div class="row">
+							<div class="column width-3 ">
+								<a class="nav-link" href="https://www.instagram.com/unaagenciaaburrida_/?hl=es"
+									style="color: #fff;"><img src="images/icon/instagram.svg" style="height: 25px;"
+										alt=""></a>
+							</div>
+							<div class="column width-3 ">
+								<a class="nav-link" href="https://icomoon.io/app/#/select/library"
+									style="color: #fff;"><img src="images/icon/slack.svg" style="height: 25px;"
+										alt=""></a>
+							</div>
+							<div class="column width-3 ">
+								<a class="nav-link" href="https://www.tiktok.com/@unaagenciaaburrida"
+									style="color: #fff;"><img src="images/icon/tiktok.svg" style="height: 25px;"
+										alt=""></a>
+							</div>
+							<div class="column width-3 ">
+								<a class="nav-link" href="https://icomoon.io/app/#/select/library"
+									style="color: #fff;"><img src="images/icon/whatsapp.svg" style="height: 32px;"
+										alt=""></a>
+							</div>
+						</div>
+					</div>
+
+					<div class="column width-4">
+						<h4>Stay Creative</h4>
+						<div class="signup-form-container">
+							<form class="signup-form" action="#" method="post" novalidate>
+								<div class="row">
+									<div class="column width-12">
+										<div class="field-wrapper">
+											<input type="text" name="fname" class="form-name form-element large"
+												placeholder="First Name" tabindex="1" required>
+											<span class="border"></span>
+										</div>
+									</div>
+									<div class="column width-12">
+										<div class="field-wrapper">
+											<input type="email" name="email" class="form-email form-element large"
+												placeholder="Email" tabindex="2" required>
+											<span class="border"></span>
+										</div>
+									</div>
+									<div class="column width-12">
+										<input type="submit" value="Signup"
+											class="form-submit button small bkg-charcoal bkg-hover-pink color-grey-light color-hover-white text-uppercase">
+									</div>
+								</div>
+								<input type="text" name="honeypot" class="form-honeypot form-element">
+							</form>
+							<div class="form-response color-white show">We don't spam, promise!</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</footer>
+		<!-- Footer End -->
+	</div>
+	</div>
+	
+
+	<!-- Js -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+
+	<script src="js/timber.master.min.js"></script>
+	<script src="vendor/magnific-popup/jquery.magnific-popup.min.js"></script>
+	<script src="js/creative.min.js"></script>
+
+</body>
+
+</html>
